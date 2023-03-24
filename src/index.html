@@ -73,7 +73,7 @@
             </p>
 
             <!-- Tooltip for main text-->
-            <div class="absolute -left-8 -top-4 w-[500px]">
+            <div class="absolute -left-8 -top-4 w-64 sm:w-[500px]">
               <button
                 class="duration-150 hover:scale-125"
                 x-on:click="selected !==2 ? selected=2 : selected=null"
@@ -170,7 +170,7 @@
           </button>
 
           <!-- Tooltip for notepad button -->
-          <div class="absolute left-12 top-[5.25rem] w-72 sm:w-96">
+          <div class="absolute left-12 top-[5.25rem] w-64 sm:w-96">
             <button
               class="duration-150 hover:scale-125"
               x-on:click="selected !==5 ? selected=5 : selected=null"
@@ -209,7 +209,7 @@
             />
           </button>
           <!-- Tooltip for highlighter button-->
-          <div class="absolute left-12 top-[9.5rem] w-72 sm:w-96">
+          <div class="absolute left-12 top-[9.5rem] w-64 sm:w-96">
             <button
               class="duration-150 hover:scale-125"
               x-on:click="selected !==6 ? selected=6 : selected=null"
@@ -249,7 +249,7 @@
             />
           </button>
           <!-- Tooltip for voiceover button -->
-          <div class="absolute top-[13.75rem] left-12 w-72 sm:w-96">
+          <div class="absolute top-[13.75rem] left-12 w-64 sm:w-96">
             <button
               class="duration-150 hover:scale-125"
               x-on:click="selected !==7 ? selected=7 : selected=null"
@@ -287,7 +287,7 @@
         </div>
 
         <!-- Tooltip for toolbar -->
-        <div class="absolute left-0 -top-0 w-72 sm:w-96">
+        <div class="absolute left-0 -top-0 w-64 sm:w-96">
           <button
             class="duration-150 hover:scale-125"
             x-on:click="selected !==4 ? selected=4 : selected=null"
@@ -325,7 +325,7 @@
           class="fixed bottom-0 right-2 z-40"
           :class="notepadOpen ? '' : 'hidden'"
         >
-          <div class="relative h-fit w-72 rounded-lg bg-olive-200 px-8 py-10">
+          <div class="relative h-fit w-64 rounded-lg bg-olive-200 px-8 py-10">
             <div class="border-[1px] border-gray-500 bg-yellow-100 px-6 py-3">
               <p class="adhd-text text-xl">
                 Dedicate a a section for note taking so the user can write their
