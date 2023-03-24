@@ -121,7 +121,7 @@
             <img class="w-full rounded-md" src="img/meadow.jpg" alt="meadow" />
 
             <!-- Tooltip for image -->
-            <div class="absolute left-0 top-0 w-96">
+            <div class="absolute left-0 top-0 w-64 sm:w-96">
               <button
                 class="duration-150 hover:scale-125"
                 x-on:click="selected !==3 ? selected=3 : selected=null"
@@ -354,7 +354,10 @@
         </div>
 
         <!-- Tooltip for previous content info -->
-        <div class="absolute left-0 -top-0 w-96" x-data="{ tooltip: false }">
+        <div
+          class="absolute left-0 -top-0 w-64 sm:w-96"
+          x-data="{ tooltip: false }"
+        >
           <button
             class="duration-150 hover:scale-125"
             x-on:click="tooltip = !tooltip"
