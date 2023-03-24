@@ -22,7 +22,7 @@
     ></script>
   </head>
   <body
-    class="relative bg-olive-100 px-8 pt-40 font-sans text-lg text-gray-600 sm:px-28 lg:px-36 xl:px-48 2xl:px-60"
+    class="relative bg-olive-100 px-10 pt-40 font-sans text-lg text-gray-600 sm:px-28 lg:px-36 xl:px-48 2xl:px-60"
   >
     <main class="mx-auto max-w-6xl" x-data="{selected: null}">
       <!-- Main text -->
@@ -32,7 +32,7 @@
         </h1>
 
         <!-- Tooltip for background-->
-        <div class="absolute left-10 top-7 w-80 sm:w-96">
+        <div class="absolute left-10 top-10 w-80 sm:w-96">
           <button
             class="duration-150 hover:scale-125"
             x-on:click="selected!==1 ? selected=1 : selected= null"
@@ -287,7 +287,7 @@
         </div>
 
         <!-- Tooltip for toolbar -->
-        <div class="absolute left-8 -top-0 w-80 sm:w-96">
+        <div class="absolute left-0 -top-0 w-72 sm:w-96">
           <button
             class="duration-150 hover:scale-125"
             x-on:click="selected !==4 ? selected=4 : selected=null"
