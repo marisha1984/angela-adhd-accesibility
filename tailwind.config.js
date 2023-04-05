@@ -8,9 +8,14 @@ module.exports = {
       colors: {
         'olive': {
           100: '#EBFFE2',
+          150: '#B9DFC166',
           200: '#C5DFB9',
           400: '#8CBC76',
           500: '#70985E'
+        },
+        'bluegray': {
+          100: '',
+          400: '#76B8BC'
         }
       },
       lineClamp: {
