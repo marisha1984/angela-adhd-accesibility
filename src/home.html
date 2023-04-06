@@ -29,11 +29,11 @@
     ></script>
   </head>
   <body
-    class="relative h-fit overflow-x-clip bg-olive-100 px-8 py-40 font-sans text-gray-600 sm:text-lg"
+    class="relative h-fit overflow-x-clip bg-olive-100 px-8 pb-20 font-sans text-gray-600 sm:text-lg"
     x-data="{selected: null}"
   >
     <!-- Tooltip for background-->
-    <div class="absolute left-10 top-10 w-80 sm:w-96">
+    <!-- <div class="absolute left-20 top-52 w-80 sm:w-96">
       <button
         class="duration-150 hover:scale-125"
         x-on:click="selected!==1 ? selected=1 : selected= null"
@@ -58,9 +58,151 @@
           <div class="absolute h-full w-[3px] bg-olive-500"></div>
         </button>
       </div>
-    </div>
+    </div> -->
     <!-- tooltip end -->
-    <main class="relative mx-auto max-w-6xl">
+
+    <!-- Menu -->
+    <header
+      class="relative mx-20 rounded-lg rounded-t-none bg-bluegray-100 p-3"
+    >
+      <ul class="flex items-center justify-between">
+        <li
+          class="flex h-24 w-32 flex-col items-center justify-center rounded-lg bg-yellow-50"
+        >
+          <img src="/src/img/news.svg" alt="news" /><span class="adhd-text"
+            >News</span
+          >
+        </li>
+        <li
+          class="flex h-24 w-32 flex-col items-center justify-center rounded-lg bg-yellow-50"
+        >
+          <img src="/src/img/entertainment.svg" alt="entertainment" /><span
+            class="adhd-text"
+            >Entertainment</span
+          >
+        </li>
+        <li
+          class="flex h-24 w-32 flex-col items-center justify-center rounded-lg bg-yellow-50"
+        >
+          <img src="/src/img/money.svg" alt="money" /><span class="adhd-text"
+            >Money</span
+          >
+        </li>
+        <li
+          class="flex h-24 w-32 flex-col items-center justify-center rounded-lg bg-yellow-50"
+        >
+          <img src="/src/img/lifestyle.svg" alt="lifestyle" /><span
+            class="adhd-text"
+            >Lifestyle</span
+          >
+        </li>
+        <li
+          class="flex h-24 w-32 flex-col items-center justify-center rounded-lg bg-yellow-50"
+        >
+          <img src="/src/img/health.svg" alt="health" /><span class="adhd-text"
+            >Health</span
+          >
+        </li>
+        <li
+          class="flex h-24 w-32 flex-col items-center justify-center rounded-lg bg-yellow-50"
+        >
+          <img src="/src/img/sports.svg" alt="sports" /><span class="adhd-text"
+            >Sports</span
+          >
+        </li>
+        <li
+          class="flex h-24 w-32 flex-col items-center justify-center rounded-lg bg-yellow-50"
+        >
+          <img src="/src/img/travel.svg" alt="travel" /><span class="adhd-text"
+            >Travel</span
+          >
+        </li>
+        <li
+          class="flex h-24 w-32 flex-col items-center justify-center rounded-lg bg-yellow-50"
+        >
+          <img src="/src/img/video.svg" alt="video" /><span class="adhd-text"
+            >Videos</span
+          >
+        </li>
+        <li
+          class="relative flex h-24 w-32 flex-col items-center justify-center rounded-lg bg-yellow-50"
+        >
+          <img src="/src/img/about.svg" alt="about" /><span class="adhd-text"
+            >About Us</span
+          >
+          <div
+            class="absolute flex h-8 w-28 translate-y-16 items-center justify-center rounded-lg bg-bluegray-100 text-gray-500"
+          >
+            &#x25B2;
+          </div>
+        </li>
+        <li
+          class="flex h-24 w-32 flex-col items-center justify-center rounded-lg bg-yellow-50"
+        >
+          <img src="/src/img/login.svg" alt="log in" /><span class="adhd-text"
+            >Log in</span
+          >
+        </li>
+      </ul>
+      <!-- Tooltip for menu-->
+      <div class="absolute -left-8 top-2 w-80 sm:w-[500px]">
+        <button
+          class="duration-150 hover:scale-125"
+          x-on:click="selected !==12 ? selected=12 : selected=null"
+        >
+          <img src="img/question.svg" alt="question-icon" />
+        </button>
+        <div
+          x-show="selected===12"
+          class="absolute z-50 mt-1 rounded-lg border-2 border-olive-500 bg-white py-4 px-7"
+        >
+          <div>
+            <p>
+              The menu bar on the official Simcast website is of a dark purple
+              shade that can be straining on the eyes. There are also no icons
+              to represent the menu options. In the ADHD counterpart of this
+              website there is a retractable menu bar that contains intuitive
+              icons, making the menu bar easier to navigate. Moreover, instead
+              of splitting the webpage into two sections, one containing the
+              news segments and another the login page, the latter has been
+              added to the menu bar so that ADHD users would not be confused and
+              distracted by the large amount of information at hand.
+            </p>
+            <!-- <p class="mt-3">
+              This menu style takes inspiration from the official Apple website
+              the link to which you can find here:
+              <a
+                class="underline underline-offset-4"
+                href="https://www.apple.com/uk/iphone/"
+                >https://www.apple.com/uk/iphone/</a
+              >
+            </p>
+            <p>
+              The icons are all minimalist and intuitive, this in turn ensures
+              that users are able to manipulate the website with greater ease.
+              The simple navigation structure does not rely on a global search
+              function and does not contain a menu within a menu. Users can see
+              the resources they have access to from first glance and without
+              having to dig through multiple tabs. The arrow below the menu
+              ensures that users can hide the menu bar as it can prove to be a
+              distraction to those with ADHD.
+            </p> -->
+          </div>
+          <button
+            x-on:click="selected=null"
+            class="absolute right-2 top-3 flex h-5 w-5 rotate-45 items-center justify-center"
+          >
+            <div class="absolute h-[3px] w-full bg-olive-500"></div>
+            <div class="absolute h-full w-[3px] bg-olive-500"></div>
+          </button>
+        </div>
+      </div>
+      <!-- tooltip end -->
+    </header>
+    <!-- end of menu -->
+
+    <!-- Main part -->
+    <main class="relative mx-auto mt-14 max-w-6xl">
       <h1
         class="adhd-text text-5xl leading-[3rem] tracking-wider text-gray-700 md:text-9xl"
       >
@@ -156,7 +298,7 @@
               alt="meadow"
             />
             <!-- Tooltip for image -->
-            <div class="absolute left-0 top-0 w-80 sm:w-96">
+            <!-- <div class="absolute left-0 top-0 w-80 sm:w-96">
               <button
                 class="duration-150 hover:scale-125"
                 x-on:click="selected !==5 ? selected=5 : selected=null"
@@ -181,12 +323,12 @@
                   <div class="absolute h-full w-[3px] bg-olive-500"></div>
                 </button>
               </div>
-            </div>
+            </div> -->
             <!-- tooltip end -->
           </div>
 
           <!-- Tooltip for adhd text-->
-          <div class="absolute left-2 top-2 w-80 sm:w-[500px]">
+          <!-- <div class="absolute left-2 top-2 w-80 sm:w-[500px]">
             <button
               class="duration-150 hover:scale-125"
               x-on:click="selected !==4 ? selected=4 : selected=null"
@@ -225,7 +367,7 @@
                 <div class="absolute h-full w-[3px] bg-olive-500"></div>
               </button>
             </div>
-          </div>
+          </div> -->
           <!-- tooltip end -->
         </article>
         <article
@@ -268,7 +410,9 @@
         </article>
       </section>
     </main>
+    <!--  -->
 
+    <!-- Toolbar + Notepad -->
     <aside x-data="{notepadOpen:true}">
       <!-- Toolbar -->
       <section class="fixed top-8 right-6 z-50">
@@ -287,7 +431,7 @@
             />
           </button>
           <!-- Tooltip for notepad button -->
-          <div class="absolute left-12 top-[5.25rem] w-80 sm:w-96">
+          <!-- <div class="absolute left-12 top-[5.25rem] w-80 sm:w-96">
             <button
               class="duration-150 hover:scale-125"
               x-on:click="selected !==6 ? selected=6 : selected=null"
@@ -315,7 +459,7 @@
                 <div class="absolute h-full w-[3px] bg-olive-500"></div>
               </button>
             </div>
-          </div>
+          </div> -->
           <!-- tooltip end -->
 
           <button class="h-12 w-12 rounded-full bg-yellow-100 p-1">
@@ -326,7 +470,7 @@
             />
           </button>
           <!-- Tooltip for highlighter button-->
-          <div class="absolute left-12 top-[9.5rem] w-80 sm:w-96">
+          <!-- <div class="absolute left-12 top-[9.5rem] w-80 sm:w-96">
             <button
               class="duration-150 hover:scale-125"
               x-on:click="selected !==7 ? selected=7 : selected=null"
@@ -354,7 +498,7 @@
                 <div class="absolute h-full w-[3px] bg-olive-500"></div>
               </button>
             </div>
-          </div>
+          </div> -->
           <!-- tooltip end -->
 
           <button class="h-12 w-12 rounded-full bg-yellow-100 p-1">
@@ -365,7 +509,7 @@
             />
           </button>
           <!-- Tooltip for voiceover button -->
-          <div class="absolute top-[13.75rem] left-12 w-80 sm:w-96">
+          <!-- <div class="absolute top-[13.75rem] left-12 w-80 sm:w-96">
             <button
               class="duration-150 hover:scale-125"
               x-on:click="selected !==8 ? selected=8 : selected=null"
@@ -392,7 +536,7 @@
                 <div class="absolute h-full w-[3px] bg-olive-500"></div>
               </button>
             </div>
-          </div>
+          </div> -->
           <!-- tooltip end -->
         </div>
         <div
@@ -490,17 +634,18 @@
         <!-- tooltip end -->
       </section>
     </aside>
+    <!--  -->
 
     <!-- Previus page info -->
-    <section class="absolute bottom-0 left-0 w-full">
+    <footer class="absolute bottom-0 left-0 w-full">
       <div class="relative mx-auto w-fit">
-        <div
+        <section
           class="rounded-t-md border-x-[1px] border-t-[1px] border-gray-400 bg-red-100 px-10 pt-1"
         >
           <p class="adhd-text text-xl leading-[3rem] tracking-wider">
             The content from the previous page goes here
           </p>
-        </div>
+        </section>
 
         <!-- Tooltip for previous content info -->
         <div class="absolute left-0 -top-0 w-80 sm:w-96">
@@ -532,6 +677,6 @@
         </div>
         <!-- tooltip end -->
       </div>
-    </section>
+    </footer>
   </body>
 </html>

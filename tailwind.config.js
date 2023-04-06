@@ -14,7 +14,7 @@ module.exports = {
           500: '#70985E'
         },
         'bluegray': {
-          100: '',
+          100: '#B9DFCD',
           400: '#76B8BC'
         }
       },
